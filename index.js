@@ -283,4 +283,14 @@ const renameUser = (email, newuser) =>{
 
 renameUser("Telly.Hoeger@billy.biz", "Eren Yeager")
 
+const monthlyPoints = (arr) =>{
+    
+    users.forEach((item, idx) => item.MonthyPoints = arr[idx])
+    
+    return users
+    
+}
+
+monthlyPoints([50, 20, 40, 33, 60, 20, 90, 110, 15, 30] )
+
  console.log(users)
