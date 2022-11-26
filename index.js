@@ -251,6 +251,36 @@ const getUsersInfo = (email) => {
     return user
 }
 
-getUsersInfo("Karley_Dach@jasper.info")
+console.log(getUsersInfo("Karley_Dach@jasper.info"))
 
-console.log(users)
+// This month is special! We are going to add an additional 10% to everyone’s point totals! Create a function to do this (example: if someone has 200 points, we will bump it up to 220)
+
+// const Add10 = () => {
+//     users.forEach(i =>)
+// }
+
+
+//  The user with email Chaim_McDermott@dana.io has submitted a request to delete her account. Make a function that will remove her from the array (taking the email as a parameter).
+
+ const removeUser = (email) => {
+    
+   let arr = users.map(item => item.email)
+    let index = arr.indexOf(email)
+        arr.forEach(i =>{i === email ? users.splice(index, 1) : null })
+    return users
+ }
+
+removeUser("Chaim_McDermott@dana.io")
+ 
+//Kurtis Weissnat (Telly.Hoeger@billy.biz)  just submitted a request to change his username to “Eren Yeager”. We want to be able to change people’s usernames easily. 
+const renameUser = (email, newuser) =>{
+    let arr = users.map(item => item.email)
+    let index = arr.indexOf(email)
+    arr.forEach(i =>{i === email ? users[index].username = newuser: null}) 
+     return users                                  
+    
+}
+
+renameUser("Telly.Hoeger@billy.biz", "Eren Yeager")
+
+ console.log(users)
