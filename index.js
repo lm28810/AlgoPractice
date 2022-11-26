@@ -241,4 +241,16 @@ const removeNums = () => {
 
 removeNums()
 
+// Make a function called getUserInfo that returns the user object found using the email passed as a parameter
+
+const getUsersInfo = (email) => {
+    let user = ""
+   let arr = users.map(item => item.email)
+    let index = arr.indexOf(email)
+    arr.forEach(i =>{i === email ? user= users[index] : null })
+    return user
+}
+
+getUsersInfo("Karley_Dach@jasper.info")
+
 console.log(users)
